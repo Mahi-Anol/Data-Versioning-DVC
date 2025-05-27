@@ -9,6 +9,11 @@ data={'name':['Alice','bob','charlie'],
 
 df=pd.DataFrame(data)
 new_row={'name':"mahi",'age':34,'city':'Dhaka'}
+
+df.loc[len(df.index)]=new_row
+
+new_row={'name':"mahi",'age':34,'city':'Dhaka'}
+
 df.loc[len(df.index)]=new_row
 
 df.to_csv(r'./data/data.csv')
