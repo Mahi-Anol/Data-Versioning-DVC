@@ -6,6 +6,9 @@ data={'name':['Alice','bob','charlie'],
       'city':['New York','Los Angeles', 'chicago']
       }
 
-df=pd.DataFrame(data)
 
-df.to_csv(r'./data.csv')
+df=pd.DataFrame(data)
+new_row={'name':"mahi",'age':34,'city':'Dhaka'}
+df.loc[len(df.index)]=new_row
+
+df.to_csv(r'./data/data.csv')
